@@ -5,15 +5,19 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public int score;
+    int score;
     public static GameManager inst;
 
-    public Text scoreText;
+    [SerializeField]public Text scoreText;
+
+    [SerializeField] PlayerMovement playerMovement;
 
     public void IncrementScore()
     {
         score++;
         scoreText.text = "SCORE: " + score;
+        // Increase the player's speed
+        playerMovement.speed += playerMovement.speedIncreasePerPoint;
     }
 
 

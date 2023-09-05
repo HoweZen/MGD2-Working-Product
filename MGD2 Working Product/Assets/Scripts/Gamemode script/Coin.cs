@@ -5,7 +5,7 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {
     // Make coin spins
-    public float turnSpeed = 90f;
+    [SerializeField]public float turnSpeed = 90f;
 
     private void OnTriggerEnter(Collider other)
     {

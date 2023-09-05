@@ -8,10 +8,17 @@ public class PlayerMovement : MonoBehaviour
 
     //start default speed is 5
     public float speed = 5;
-    public Rigidbody rb;
+    [SerializeField]public Rigidbody rb;
 
     //control player horizontal movement 
-    float horizontalInput;
+    [SerializeField]float horizontalInput;
+
+    //Increase player speed, check game manager too to disable or enable
+    public float speedIncreasePerPoint = 0.1f;
+
+    //Allow player to jump
+    [SerializeField] float jumpForce = 400f;
+    [SerializeField] LayerMask groundMask;
 
     private void FixedUpdate()
     {
@@ -29,6 +36,11 @@ public class PlayerMovement : MonoBehaviour
     {
         //control or input to move player horizontally
         horizontalInput = Input.GetAxis("Horizontal");
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Jump();
+        }
 
         //if player fall off map this will kill the player
         if (transform.position.y < -30)
@@ -48,5 +60,15 @@ public class PlayerMovement : MonoBehaviour
     {
         //load the level upon restart or player death
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    void Jump()
+    {
+        //Check whether we are currently grounded
+        float height = GetComponent<Collider>().bounds.size.y;
+        bool isGrounded = Physics.Raycast(transform.position, Vector3.down, (height / 2) + 0.1f, groundMask);
+
+        //If we are, jump
+        rb.AddForce(Vector3.up * jumpForce);
     }
 }

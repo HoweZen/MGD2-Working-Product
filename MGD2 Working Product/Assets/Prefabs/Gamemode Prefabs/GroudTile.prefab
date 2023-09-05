@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 672434634619345254}
   - component: {fileID: 6870870346476966615}
   - component: {fileID: 1531693420074544171}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1804440000820216005}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ObstacleSpawnMiddle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7412191952019681207}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ObstacleSpawnRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 4847162548944713489}
   - component: {fileID: 1325883207608622995}
   - component: {fileID: 6520052618905743491}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GroudTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,9 +222,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fdedbbd18d981a4b83eb0a88a7c2cd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefab: {fileID: 7147030982282460615, guid: 0fb474107835f0345a1024e9b067795d,
-    type: 3}
   coinPrefab: {fileID: 4720307412283751973, guid: a5691fcedd6f22649945fab4a3d2d77c,
+    type: 3}
+  obstaclePrefab: {fileID: 7147030982282460615, guid: 0fb474107835f0345a1024e9b067795d,
     type: 3}
 --- !u!1 &7957120954225961129
 GameObject:
@@ -235,7 +235,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9184377308736763057}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NextSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -266,7 +266,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1856290157143173976}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ObstacleSpawnLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}

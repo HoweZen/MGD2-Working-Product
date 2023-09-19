@@ -3,7 +3,12 @@ guid: f3781a17e80b44d43ab512fd2566aec9
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tong
+    second: {fileID: 2100000, guid: 1b89c3f83adbbb94b9c2c4874f09c084, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
